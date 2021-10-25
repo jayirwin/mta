@@ -60,8 +60,9 @@ class MTA:
 		self.START = '(start)'
 		self.CONV = '(conversion)'
 
-		if not (set(self.data.columns) = set('USER_ID USER_ORDER_SEQUENCE_COUNT exposure_times path total_conversions total_conversion_value total_null'.split())):
-			raise ValueError(f'wrong column names in {data}!')
+		#temporarily ignoring this check.
+		#if not (set(self.data.columns) <= set('USER_ID USER_ORDER_SEQUENCE_COUNT exposure_times path total_conversions total_conversion_value total_null'.split())):
+		#	raise ValueError(f'wrong column names in {data}!')
 		
 		if add_timepoints:
 			self.add_exposure_times(1)

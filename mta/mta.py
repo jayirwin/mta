@@ -54,7 +54,7 @@ class MTA:
 
 		#self.data = pd.read_csv(os.path.join(os.path.dirname(__file__),'data', data))
 		#changing the above to the below since my program doesn't reside in the location of the package.
-		self.data = pd.read_csv(os.path.join(os.path.getcwd(__file__),'data', data))
+		self.data = pd.read_csv(data)
 		self.sep = sep
 		self.NULL = '(null)'
 		self.START = '(start)'

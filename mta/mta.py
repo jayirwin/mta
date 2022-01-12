@@ -54,15 +54,16 @@ class MTA:
 
 		#self.data = pd.read_csv(os.path.join(os.path.dirname(__file__),'data', data))
 		#changing the above to the below since my program doesn't reside in the location of the package.
-		self.data = pd.read_csv(data)
+		#self.data = pd.read_csv(data)
+		self.data = data
 		self.sep = sep
 		self.NULL = '(null)'
 		self.START = '(start)'
 		self.CONV = '(conversion)'
 
 		
-		if not (set(self.data.columns) <= set('USER_ID USER_ORDER_SEQUENCE_COUNT exposure_times path total_conversions total_conversion_value total_null'.split())):
-			raise ValueError(f'wrong column names in {data}!')
+		#if not (set(self.data.columns) <= set('USER_ID USER_ORDER_SEQUENCE_COUNT exposure_times path total_conversions total_conversion_value total_null'.split())):
+		#	raise ValueError(f'wrong column names in {data}!')
 		
 		if add_timepoints:
 			self.add_exposure_times(1)
